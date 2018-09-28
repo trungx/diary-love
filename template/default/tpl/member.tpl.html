@@ -1,0 +1,32 @@
+<!-- BEGIN html -->
+	<!-- #BEGIN member.panel -->
+		<div id='member' class='member' style='margin-right: -10px;'><br />
+			<div style='float: left; height: 110px;'>
+                <b>Hi {you}!</b><br>
+                 <img src='{skin.link}/images/diary.png' align='left' style='margin-right: 5px;'>&nbsp;{content}
+                 <br />
+                <img src='{skin.link}/images/calendar.png' align='left' style='margin-right: 5px;'><b>{memory}</b><br>
+            </div>
+            <div style='float: left; margin-left: -80px;'>
+                <img class='folder' style='cursor: pointer;' title='{lang.config}' onclick="viewpages('main','member=panel');" src='images/cpanel/config.png' />&nbsp;
+                <img class='folder' style='cursor: pointer;' title='{lang.playlist}' onclick="play('music=playlist');" src='images/cpanel/music.png' />&nbsp;
+                <img class='folder' style='cursor: pointer;' onclick='check_logout();' title='Logout' src='images/cpanel/logout.png' />
+			</div>
+		</div><!-- end member -->
+	<!-- #END member.panel -->
+	
+	<!-- #BEGIN member.logout -->
+		<div align="center" style='padding: 15px;'>
+			<div class='member_avatar' style='margin-top: 15px;'><img src="{avatar}" width="75" height="72"></div>
+			<div style="float: left;"><font color="#FF0000"><b>{message}</b></font><br><br>
+			<center>
+			<div align="center">
+				<span onclick='logout();' class='bluebutton'>{lang.ok}</span>
+				<span onclick="hideform('loading');" class="redbutton">{lang.cancel}</span>
+			</center></div>
+			</div>
+			
+		</div>
+	<!-- #END member.logout -->
+
+<!-- END html -->

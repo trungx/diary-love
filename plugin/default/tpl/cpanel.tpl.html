@@ -1,0 +1,491 @@
+<!-- BEGIN html -->
+	<!-- #BEGIN cpanel -->
+        <div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left;'>
+  				<hl><a href='javascript:;' onclick="viewpages('main','member=panel');web_title('Cpanel - Home');" title='{lang.cpanel}'>{lang.cpanel}</a></hl> - <b>Home</b>
+  	    </div>
+
+      <!--  <div align='center' style='width: 409px; background-color: #EAEAEA; border: 1px solid #c0c0c0; margin-bottom: 5px; text-align: left; padding-left: 5px;'>
+  		    <b>Tuy chon quan ly ca nhan:</b>
+  	    </div>      -->
+        <div class="icon" onclick="viewpages('cmain','member=change_info');" title="{lang.change_info}">
+            <img src="images/cpanel/info.gif" /><br />Info
+        </div>
+        <div class="icon" onclick="viewpages('cmain','member=note');" title="{lang.config_note}">
+            <img src="images/cpanel/note.gif" /><br />Note
+        </div>
+        <div class="icon" onclick="viewpages('cmain','member=mess');" title="{lang.config_mess}">
+            <img src="images/cpanel/mess.gif" /><br />Message
+        </div>
+        <div class="icon" onclick="viewpages('cmain','member=playlist');" title="{lang.config_playlist}">
+            <img src="images/cpanel/music.gif" /><br />Playlist
+        </div>
+        <div class="icon" onclick="viewpages('cmain','member=memory');" title="{lang.config_memory}">
+            <img src="images/cpanel/cal.gif" /><br />Memory
+        </div>
+        <div class="icon" onclick="viewpages('cmain','member=change_pass');" title="{lang.change_pass}">
+            <img src="images/cpanel/pass.gif" /><br />Password
+        </div>
+
+        <div class="icon" onclick="viewpages('cmain','member=skin');" title="{lang.web_template}">
+            <img src="images/cpanel/skin.gif" /><br />Skin
+        </div>
+        {admin.tool}
+
+        <div class="icon" onclick="viewpages('cmain','member=update');" title="{lang.about}">
+            <img src="images/cpanel/about.gif" /><br />About
+        </div>
+
+        <div id="cmain" style="width: 460px; float: left; margin-top: 5px;">{main}</div>
+	<!-- #END cpanel -->
+
+
+    <!-- #BEGIN admin -->
+       <!-- <div align='center' style='margin-top: 10px; float: left; width: 409px; background-color: #EAEAEA; border: 1px solid #c0c0c0; margin-bottom: 5px; text-align: left; padding-left: 5px;'>
+  		    <b>Tuy chon quan ly trang nhat ky:</b>
+  	    </div>    -->
+        <div class="icon" onclick="viewpages('cmain','admin=config');" title="{lang.config}">
+            <img src="images/cpanel/setup.gif" /><br />Config
+        </div>
+
+        <div class="icon" onclick="viewpages('cmain','admin=category');" title="{lang.category}">
+            <img src="images/cpanel/cat.gif" /><br />Category
+        </div>
+        <div class="icon" onclick="viewpages('cmain','admin=block');" title="{lang.block}">
+            <img src="images/cpanel/block.gif" /><br />Block
+        </div>
+        <div class="icon" onclick="viewpages('cmain','admin=addon');" title="Add-ons">
+            <img src="images/cpanel/addon.gif" /><br />Add-ons
+        </div>
+    <!-- #END admin -->
+
+
+
+
+    <!-- #BEGIN changepass -->
+         <div align='center' style='margin-top: 10px; float: left; width: 460px; background-color: #EAEAEA; border: 1px solid #c0c0c0; margin-bottom: 5px; text-align: left; padding-left: 5px;'>
+  		    <b>{lang.change_pass}:</b>
+  	    </div><br />
+        <form method="post" onsubmit="return change_pass();">
+        <div style="float: left; margin: 3px; width: 120px; padding-left: 25px;">
+            <b>{lang.pass_now}:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 200px; padding-left: 5px;">
+            <input id="pass_old" type="password" size="32" />
+        </div>
+
+        <div style="float: left; margin: 3px; width: 120px; padding-left: 25px;">
+            <b>{lang.pass_new}:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 200px; padding-left: 5px;">
+            <input id="pass_new" type="password" size="32" />
+        </div>
+
+        <div style="float: left; margin: 3px; width: 120px; padding-left: 25px;">
+            <b>{lang.pass_config}:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 220px; padding-left: 5px;">
+            <input id="pass_c" type="password" size="32" />
+        </div>
+        <div style="float: left; margin: 3px; width: 120px; padding-left: 25px;">
+            <b>{lang.capcha}:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 220px; padding-left: 5px;">
+             <input id="capcha" type="text" size="15" />&nbsp;<span style="width: 60px;" id="capcha-img"><img title="{lang.change_capcha}" src="{capcha}" style="cursor: pointer; margin-bottom:-3px;" /></span>&nbsp;<img src="images/icon/refresh.gif" title="{lang.change_capcha}" onclick="change_capcha();" style="cursor: pointer; margin-bottom: -3px;" />
+        </div>
+        <p align="center" style='padding-left: 32%;'>
+				<span onclick='change_pass();' class='redbutton'>{lang.ok}</span>
+				<span onclick="" class="bluebutton">{lang.cancel}</span>
+		</p>
+        </form>
+    <!-- #END changepass -->
+
+    <!-- #BEGIN change_info -->
+        <div align='center' style='margin-top: 10px; float: left; width: 460px; background-color: #EAEAEA; border: 1px solid #c0c0c0; margin-bottom: 5px; text-align: left; padding-left: 5px;'>
+  		    <b>{lang.change_info}:</b>
+  	    </div><br />
+        <form onsubmit="return change_info();" method="post">
+        <div style="float: left; margin: 3px; width: 100px; padding-left: 50px;">
+            <b>{lang.username}:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 270px; padding-left: 5px;">
+            <input id="username" type="text" value="{username}" size="32" />&nbsp;<font color="red"><b>*</b></font>
+        </div>
+
+        <div style="float: left; margin: 3px; width: 100px; padding-left: 50px;">
+            <b>{lang.fullname}:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 270px; padding-left: 5px;">
+            <input id="fullname" type="text" value="{fullname}" size="32" />&nbsp;<font color="red"><b>*</b></font>
+        </div>
+
+        <div style="float: left; margin: 3px; width: 100px; padding-left: 50px;">
+            <b>{lang.brithday}:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 270px; padding-left: 5px;">
+              <b>D/M/Y:</b>&nbsp; <input id="day" type="text" size="3" value="{day}" /> <b>/</b> <input id="month" type="text" size="3" value="{month}" /> <b>/</b> <input id="year" size="7" value="{year}" type="text" />&nbsp;<font color="red"><b>*</b></font>
+        </div>
+        <div style="float: left; margin: 3px; width: 100px; padding-left: 50px;">
+            <b>Email:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 270px; padding-left: 5px;">
+             <input type="text" value="{email}" id="email" size="32" />&nbsp;<font color="red"><b>*</b></font>
+        </div>
+        <div style="float: left; margin: 3px; width: 100px; padding-left: 50px;">
+            <b>Blog:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 270px; padding-left: 5px;">
+             <input type="text" value="{website}" id="website" size="32" />
+        </div>
+
+        <div style="float: left; margin: 3px; width: 100px; padding-left: 50px;">
+            <b>Yahoo:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 270px; padding-left: 5px;">
+             <input type="text" value="{yahoo}" id="yahoo" size="32" />&nbsp;<font color="red"><b>*</b></font>
+        </div>
+        <div style="float: left; margin: 3px; width: 100px; padding-left: 50px;">
+            <b>Skype:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 270px; padding-left: 5px;">
+             <input type="text" value="{skype}" id="skype" size="32" />
+        </div>
+        <div style="float: left; margin: 3px; width: 100px; padding-left: 50px;">
+            <b>ICQ:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 270px; padding-left: 5px;">
+             <input type="text" value="{icq}" id="icq" size="32" />
+        </div>
+
+        <div style="float: left; margin: 3px; width: 100px; padding-left: 50px;">
+            <b>Avatar:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 270px; padding-left: 5px;">
+             <input type="text" value="{avatar}" id="avatar" size="32" />
+        </div>
+        <div style="float: left; margin: 3px; width: 100px; padding-left: 50px;">
+            <b>Gavatar:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 270px; padding-left: 5px;">
+             {gavatar} <a href="{gavatar.link}" target="_blank" title="Gavatar">Link</a>
+        </div>
+        <div style="float: left; margin: 3px; width: 100px; padding-left: 50px;">
+            <b>{lang.capcha}:</b>
+        </div>
+        <div style="float: left; margin: 3px; width: 270px; padding-left: 5px;">
+             <input id="capcha" type="text" size="15" />&nbsp;<span style="width: 60px;" id="capcha-img"><img title="{lang.change_capcha}" src="{capcha}" style="cursor: pointer; margin-bottom:-3px;" /></span>&nbsp;<img src="images/icon/refresh.gif" title="{lang.change_capcha}" onclick="change_capcha();" style="cursor: pointer; margin-bottom: -3px;" />
+        </div>
+        <p align="center" style='padding-left: 32%;'>
+            <span title="{lang.submit}" class="redbutton" onclick="change_info();">{lang.submit}</span>
+            <span title="{lang.cancel}" class="bluebutton" onclick="viewpages('cmain','member=main');">{lang.cancel}</span>
+        </p>
+    <!-- #END change_info -->
+
+    <!-- #BEGIN note -->
+        <script language='javascript'>
+			var text_name = 'post-content';
+		</script>
+        <div align='center' style='margin-top: 10px; float: left; width: 460px; background-color: #EAEAEA; border: 1px solid #c0c0c0; margin-bottom: 5px; text-align: left; padding-left: 5px;'>
+  		    <b>{lang.config_note}:</b>
+  	    </div><br /><br />
+        <form name='post' method="post" onsubmit="return change_note();">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>{lang.content}:  </b><br />
+            <div align='center' style='padding-left: 30px; width: 100%; float: left; '>
+			    {editor}
+			    <textarea id="post-content" name="post-content" style="height: 155px; width: 350px; background-color: #ffffff;">{note}</textarea><br />
+            </div>
+
+        <p align="center" style='padding-left: 32%;'>
+            <span title="{lang.submit}" class="redbutton" onclick="change_note();">{lang.submit}</span>
+            <span title="{lang.cancel}" class="bluebutton" onclick="viewpages('cmain','member=main');">{lang.cancel}</span>
+        </p>
+        </form>
+    <!-- #END note -->
+
+    <!-- #BEGIN memory.top -->
+        <div align='center' style='margin-top: 10px; float: left; width: 460px; background-color: #EAEAEA; border: 1px solid #c0c0c0; margin-bottom: 5px; text-align: left; padding-left: 5px;'>
+  		    <b>{lang.month_memory}:</b>
+  	    </div><br /><br />
+        <div style="width: 460px; background-color: #FFA6A6; padding: 2px 6px 2px 0;">
+       				{now}
+        </div>
+        <div align='center' style='margin-top: 10px; float: left; width: 460px; background-color: #EAEAEA; border: 1px solid #c0c0c0; margin-bottom: 5px; text-align: left; padding-left: 5px;'>
+  		    <b>{lang.config_memory}:</b>
+  	    </div><br /><br />
+           				{more}
+        <div style="float: right;">
+            <span class="redbutton" onclick="memory_show_add();" title="Add">New</span>
+        </div>
+
+        <input id="memory_new_close" type="hidden" value="show" size="1" />
+        <div id="memory_new" style="width: 460; display: none;">
+
+        </div>
+    <!-- #END memory.top -->
+
+    <!-- #BEGIN memory.list -->
+            <div id="memory-{id}" style='margin-left: 2px; margin-bottom: 3px; cursor: help; width: 460px ;border-left: 1px solid #eaeaea; border-top: 1px solid #eaeaea; border-right: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0;'>
+                <div style='background-color: #f1f1f1;'><b>{title}</b> - {num}</div>
+                <div  style="background-color: #fff; height: 25px;">
+                    <div style="float: right;" class="edit">{edit} {del}</div>
+                    <small>{date}</small><br />
+                </div>
+            </div>
+    <!-- #END memory.list -->
+
+
+    <!-- #BEGIN memory.add -->
+        <div align='center' style='margin-top: 10px; float: left; width: 460px; background-color: #EAEAEA; border: 1px solid #c0c0c0; margin-bottom: 5px; text-align: left; padding-left: 5px;'>
+  		        <b>Them ngay dang nho:</b>
+  	    </div><br /><br />
+        <script language='javascript'>
+		    var text_name = 'post-content';
+		</script>
+        <form method="post" onsubmit="return memory_new();" name="post">
+            <div style="float: left; margin: 3px; width: 100px; padding-left: 25px;">
+                <b>{lang.title}:</b>
+            </div><input type="hidden" size="1" value="{id}" id="id" />
+            <div style="float: left; margin: 3px; width: 230px; padding-left: 5px;">
+                 <input type="text" value="{title}" id="title" size="32" />&nbsp;<font color="red"><b>*</b></font>
+            </div>
+            <div style="float: left; margin: 3px; width: 100px; padding-left: 25px;">
+                <b>{lang.date}:</b>
+            </div>
+            <div style="float: left; margin: 3px; width: 230px; padding-left: 5px;">
+                  <b>D/M/Y:</b>&nbsp; <input id="day" type="text" size="3" value="{day}" /> <b>/</b> <input id="month" type="text" size="3" value="{month}" /> <b>/</b> <input id="year" size="7" value="{year}" type="text" />&nbsp;<font color="red"><b>*</b></font>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>{lang.content}:  </b><br />
+            <div align='center' style='width: 460px ;float: left; '>
+			    {editor}
+			    <textarea id="post-content" name="post-content" style="height: 155px; width: 350px; background-color: #ffffff;">{content}</textarea><br />
+            </div>
+
+            <p align="center" style='padding-left: 32%;'>
+            <span title="{lang.submit}" class="redbutton" onclick="memory_add();">{lang.submit}</span>
+            <span title="{lang.cancel}" class="bluebutton" onclick="viewpages('cmain','member=main');">{lang.cancel}</span>
+        </p>
+        </form>
+
+
+    <!-- #END memory.add -->
+
+
+    <!-- #BEGIN top.list -->
+			<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+				<img src='{skin.link}/images/playlist.png' border='0' />&nbsp;<b>{lang.config_playlist}</b>
+			</div>   <p></p>
+		<div style="margin-left: 5px; float: left;">
+			<table cellpadding="0" cellspacing="0" width="460">
+				<!-- MSTableType="nolayout" -->
+				<tr style='background-color: #810f0f; float: left;  width: 460px; margin-left: -4px;  margin-right: -15px; margin-bottom: 1px;'>
+					<td height="24" width="30" style="border-right-style: none; border-right-width: medium" align='center'>
+						<img src="images/icon/music.gif" title="type">
+					</td>
+					<td height="21" width="250" style="border-left: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF" align="center">
+						&nbsp;<font color="#FFFFFF"><b>{lang.title}/{lang.singer}</b></font></td>
+					<td height="21" width="60"  align='center'>
+						<img src="images/icon/user.gif" title="{lang.post_by}"></td>
+					<td height="21" align='center' width="40" style="border-left: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF">
+						<img src="images/icon/play.gif" title="{lang.played}">
+					</td>
+					<td height="21" align='center' width="40">
+						<img src="images/icon/down.gif" title="{lang.downloaded}"></td>
+					<td height="21" align='center' width="40" style="border-left: 1px solid #FFFFFF;">
+						<img src="images/icon/faved.gif" title="{lang.fav}">
+					</td>
+				</tr>
+				{song.list}
+			</table>
+		</div>
+			{pages}
+	<!-- #END top.list -->
+
+    <!-- #BEGIN skin.top -->
+        <div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+		    <b>{lang.web_template}</b>
+		</div>
+
+        {list}
+
+
+    <!-- #END skin.top -->
+
+    <!-- #BEGIN skin.list -->
+        <div style="float: left; margin-top: 10px; margin-bottom: 25px;" class="photo">
+            <div style="padding: 2px; width: 85px; margin: 1px; height: 85px; background-color: {color};">
+                <img title="{lang.author}: {author}" class="folder" src="{thumb}" onclick="{url}" style="cursor: pointer;" width="85" height="85" />
+            </div>
+            <p></p>
+            <div style="photo-title">
+                <b><font color="{color}">{name}</font></b>
+            </div>
+        </div>
+    <!-- #END skin.list -->
+
+    <!-- #BEGIN update -->
+        <div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+		    <b>{lang.web_update}</b>
+		</div>
+        <div align='center' style='width: 460px;'>{logo}</div><br />
+        <table width="460">
+            <tr style="background-color: #c0c0c0;">
+                <td colspan="3" width="90" align='center'><b>{lang.phanloai}</b></td>
+                <td colspan="3" width="160" align='center'><b>{lang.nowver}</b></td>
+                <td colspan="3" width="160" align='center'><b>{lang.online_ver}</b></td>
+            </tr>
+
+            <tr style="background-color: #eaeaea;">
+                <td colspan="3" width="90" align='center'>{lang.version}</td>
+                <td colspan="3" width="160" align='center'><b>{version}</b></td>
+                <td colspan="3" width="160" align='center'><b>{newver}</b></td>
+            </tr>
+
+            <tr style="background-color: #eaeaea;">
+                <td colspan="3" width="90" align='center'>{lang.date_update}</td>
+                <td colspan="3" width="160" align='center'><b>{code.date}</b></td>
+                <td colspan="3" width="160" align='center'><b>{newdate}</b></td>
+            </tr>
+        </table>
+        <b>{lang.function_new}:</b>
+        <div style="margin-left: 5px; width: 460px; overflow:auto; border: 1px solid #CCC; height: 200px;">
+            {newfunction}
+        </div>
+
+    <!-- #END update -->
+
+
+    <!-- #BEGIN message.top -->
+        <div align='center' style='display: {tool.show}; width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+		    <b>{lang.config_mess}</b>
+		</div>
+
+        <div style='display: {tool.show}; float: right;'>
+            <img class='folder' style="cursor: pointer;" src='images/icon/inbox.gif' onclick="viewpages('cmain','member=message&type=in');" title='Inbox' />
+            <img class='folder' style="cursor: pointer;" src='images/icon/outbox.gif' onclick="viewpages('cmain','member=message&type=out');" title='Sended' />
+            <img class='folder' style="cursor: pointer;" src='images/icon/addmess.gif' onclick="viewpages('message-add','member=message_new');" title='New message' />
+        </div>
+        <div id='message-add' style='margin-left: 5px; width: 100%; float: left;'>
+            <table width="460">
+                <tr style='background-color: #c0c0c0;'>
+                    <td align='center' colspan='4' width='50'><b></b></td>
+                    <td align='center' colspan='4' width='235'><b>{lang.title} / {lang.content}</b></td>
+                    <td align='center' colspan='4' width='80'><b>{lang.date}</b></td>
+                    <td align='center' colspan='4' width='70'><b>{lang.select}</b></td>
+                </tr>
+                {list}
+            </table>
+        </div>
+    <!-- #END message.top -->
+
+    <!-- #BEGIN message.list -->
+           <tr id='message-{id}' style='background-color: #eaeaea;'>
+                <td colspan='4' width='50' align='center'>{img}</td>
+                <td colspan='4' width='235'><b><a href='javascript:;' onclick="{url}" title='Read'>{title}</a></b><br />
+                    <font color='#5d5d5d'><i>{content}</i></font>
+                </td>
+                <td colspan='4' width='70' align='center'>{time}</td>
+                <td colspan='4' width='80' align='center'>{tool}</td>
+            </tr>
+    <!-- #END message.list -->
+
+    <!-- #BEGIN message.view -->
+		<style type="text/css">
+			.close{
+				cursor:pointer;
+				padding: 3px;
+				background-color: #ff9797;
+				float: left;
+				text-align: center;
+			}
+			.close:hover{
+				padding: 3px;
+				background-color: red;
+				font-color: #ffffff;
+				float: left;
+				text-align: center;
+			}
+		</style>
+		<table border="0" cellpadding="0" cellspacing="0" style="padding: 10px;"><tr><td>
+		<div style='float:left;'>
+			<font color="#FF0000"><span style="font-family: arial, verdana, helvetica; font-size: 14px; font-weight: bold;">Message:</span></font></div>
+		<div style='float: right; height: 15px; width: 35px;' class='close' title='close' onclick="hideform('message');"><b>[X]</b></div>
+		<table width="320" border="0" cellpadding="0" cellspacing="0" style="background-color: #F7F7F7; border: 2px solid #FFFFFF; padding: 5px;">
+		 <tr>
+		 	<td align='left' style="padding: 1px; background-color: #eaeaea;">
+		 		<font color="#000000"><b>{lang.title}: {title}</b></font><br />
+                <small>{time}</small>
+		 	</td>
+		 </tr>		 <tr>
+		  	<td align='left' style="background: url({skin.link}/images/paper.gif) repeat;">
+				<font color='#000000'>{content}<br><br></font>
+		  	</td>
+		 </tr>
+		</table>
+		</tr></td></table>
+	<!-- #END message.view -->
+
+    <!-- #BEGIN message.listnew.top -->
+        <style type="text/css">
+			.close{
+				cursor:pointer;
+				padding: 3px;
+				background-color: #ff9797;
+				float: left;
+				text-align: center;
+			}
+			.close:hover{
+				padding: 3px;
+				background-color: red;
+				font-color: #ffffff;
+				float: left;
+				text-align: center;
+			}
+		</style>
+		<table border="0" cellpadding="0" cellspacing="0" style="padding: 10px;"><tr><td>
+		<div style='float:left;'>
+			<font color="#FF0000"><span style="font-family: arial, verdana, helvetica; font-size: 14px; font-weight: bold;">{num} New Message:</span></font></div>
+		<div style='float: right; height: 15px; width: 35px;' class='close' title='close' onclick="hideform('message');"><b>[X]</b></div>
+		<table width="320" border="0" cellpadding="0" cellspacing="0" style="background-color: #F7F7F7; border: 2px solid #FFFFFF; padding: 5px;">
+		 <tr>
+		  	<td align='left' style="background: url({skin.link}/images/paper.gif) repeat;">
+				{list}
+		  	</td>
+		 </tr>
+		</table>
+		</tr></td></table>
+	<!-- #END message.listnew.top -->
+
+    <!-- #BEGIN message.listnew -->
+        {img} <a href="javascript:;" onclick="{url}" title="Read"><b>{title}</b></a><br />
+    <!-- #END message.listnew -->
+
+    <!-- #BEGIN message.add -->
+        <script language='javascript'>
+			var text_name = 'content';
+		</script>
+        <form name='post' method="post">
+            <table width="460" border="0" cellpadding="0" cellspacing="0" style="margin-left: 3px; background-color: #F7F7F7; border: 2px solid #FFFFFF; padding: 5px;">
+        		 <tr>
+        		 	<td align='left' style="padding-top: 5px; padding-bottom: 5px; background-color: #eaeaea;">
+                        <div style='float: left; width: 100px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000"><b>To: </b></div><b>{to}</b><br />
+                        <div style='padding-top: 5px; float: left; width: 100px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000"><b>{lang.title}: </b></div><input id='title' type='text' size='25' /></font>
+        		 	</td>
+        		 </tr>
+                 <tr>
+        		  	<td align='left' style="padding-top: 5px;">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>{lang.content}:</b>
+        				<br /><font color='#000000'>{editor}</font>
+                        <textarea id="content" name="content" style="height: 150px; width: 350px; background-color: #ffffff;"></textarea>
+        		  	</td>
+        		 </tr>
+        	</table>
+            <div style='float: right; margin-right: 5%;'>
+                <span class='redbutton' onclick="message_submit()" title="Send">SEND</span>
+                <span class='bluebutton' onclick="viewpages('cmain','member=message&type=in')" title="Send">{lang.cancel}</span>
+            </div>
+        </form>
+    <!-- #END message.add -->
+
+
+
+
+<!-- END html -->

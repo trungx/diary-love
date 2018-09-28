@@ -1,0 +1,71 @@
+.sky-bg{
+  background: url(weather/sky-bg.jpg) no-repeat;
+}
+
+.sky-blue{
+  background: url(weather/sky-blue.png) no-repeat right top;
+}
+
+.sky-black{
+  background: url(weather/sky-black.png) no-repeat right top;
+}
+
+.sky-flur{
+  background: url(weather/sky-flur.png) no-repeat right top;
+}
+
+/* for nen lich */
+.spring{
+  background: url(calendar/spring.jpg) no-repeat center top;
+}
+
+.summer{
+  background: url(calendar/summer.jpg) no-repeat center top;
+}
+
+.fall{
+  background: url(calendar/fall.jpg) no-repeat center top;
+}
+
+.winter{
+  background: url(calendar/winter.jpg) no-repeat center top;
+}
+
+/* Icon cho phan cpanel */
+.icon {
+  background-color: #f9f9f9;
+  border: 1px solid #eaeaea;
+  float: left;
+  text-align: center;
+  padding: 0 3px;
+  margin-left: 7px;
+  margin-top: 5px;
+  width: 52px;
+}
+
+.icon:hover{
+  background-color: #f1f1f1;
+  border: 1px solid #eaeaea;
+  float: left;
+  text-align: center;
+  padding: 0 3px;
+  margin-left: 7px;
+  margin-top: 5px;
+  cursor: pointer;
+  width: 52px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

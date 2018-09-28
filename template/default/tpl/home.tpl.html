@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!-- BEGIN js --><!-- END js -->
+	<title>{web.title}</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href="{skin.link}/css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="images/style.css" rel="stylesheet" type="text/css" media="all" />
+		<style type="text/css">
+			#loading, #message, #post{
+				/* Netscape 4, IE 4.x-5.0/Win and other lesser browsers will use this */
+			  position: absolute; left: 0px; top: 0px;
+			}
+			#showloading {
+				/* Netscape 4, IE 4.x-5.0/Win and other lesser browsers will use this */
+			  position: absolute; left: 0px; top: 0px;
+			  color: #fff;
+			  text-align: center;
+			  padding: 5px;
+			}
+			body > div#showloading, body > div#loading, body > div#message {
+			  /* used by Opera 5+, Netscape6+/Mozilla, Konqueror, Safari, OmniWeb 4.5+, iCab, ICEbrowser */
+			  position: fixed;  left: 0px; top: 0px;
+			}
+
+		</style>
+		<![if lt IE 7]>
+		<style type="text/css">
+		div#loading, div#showloading, div#message{
+		  /* IE5.5+/Win - this is more specific than the IE 5.0 version */
+		  left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+		  top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+		}
+		</style>
+		<![endif]>
+		<script language='javascript'>
+			var webname = {webname};
+		</script>		
+	</head>
+		<div class='loading' id='message' name='message' style='display: none;'></div>
+		<div class='showloading' id='showloading' name='showloading' style='display: none;'></div>
+        <div class='loading' id='loading' name='loading' style='display: none;'></div>
+        <div id='clock'></div>
+
+	<noembed>
+	<xmp>
+	<BODY>
+	</xmp>
+	</noembed>
+		<div id="top" style="display: none;"></div>
+		<div id='all'>
+			<div align="center" id='sitemain'>
+				{main}
+			</div>
+		</div>
+	<noembed>
+<xmp>
+</BODY>
+</xmp>
+</noembed>
+</html>

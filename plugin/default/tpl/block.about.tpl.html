@@ -1,0 +1,63 @@
+<!-- BEGIN html -->
+	<!-- #BEGIN default -->
+		<center><a href='{img}' class="highslide" onclick="return hs.expand(this)"><img src="{img}" width="{width}" border='0'></a></center><br>
+			<table cellpadding="0" cellspacing="0" width="100%" style='margin-left: 20px;'>
+				<!-- MSTableType="nolayout" -->
+				<tr>
+					<td height="41" width="20">
+						<img src='images/icon/boy.jpg'><br>
+						<img src='images/icon/girl.jpg'></td>
+					<td height="41" width="140"><b>{name}</b></td>
+				</tr>
+			</table>
+	<!-- #END default -->
+
+    <!-- #BEGIN 360 -->
+        <script language='javascript'>
+            function change_about_img(link,width){
+                $('#about-now').fadeTo('fast', 0.09).fadeTo('fast', 1).html("<a href='"+link+"' class=\"highslide\" onclick=\"return hs.expand(this)\"><img src=\""+link+"\" width=\""+width+"\" border='0'></a>");
+                return false;
+            }
+        </script>
+            <div id='about-now' style='float: left; text-align: center; width: 100%; margin-bottom: 10px;'>
+                <center>
+                    <a href='{img}' class="highslide" onclick="return hs.expand(this)">
+                        <img src="{img}" width="{width}" border='0'>
+                    </a>
+                </center>
+            </div>
+            <p align='center'>{img.more}</p>
+			<table cellpadding="0" cellspacing="0" width="100%" style='margin-left: 20px;'>
+				<!-- MSTableType="nolayout" -->
+				<tr>
+					<td height="41" width="20">
+						<img src='images/icon/boy.jpg'><br>
+						<img src='images/icon/girl.jpg'></td>
+					<td height="41" width="140"><b>{name}</b></td>
+				</tr>
+			</table>
+	<!-- #END 360 -->
+
+    <!-- #BEGIN flash -->
+            <div style='float: left; text-align: center; width: 100%; margin-bottom: 10px;'>
+                    <embed
+		  				src="images/image_slide.swf"
+		  				width="{width}"
+		  				height="{height}"
+		 				allowscriptaccess="always"
+		  				allowfullscreen="true"
+		  				flashvars="file={xml.link}&transition=random&allowSciptAccess=always&overstretch=false&wmode=opaque&screencolor=0x000000"
+					/>
+            </div>
+			<table cellpadding="0" cellspacing="0" width="100%" style='margin-left: 20px;'>
+				<!-- MSTableType="nolayout" -->
+				<tr>
+					<td height="41" width="20">
+						<img src='images/icon/boy.jpg'><br>
+						<img src='images/icon/girl.jpg'></td>
+					<td height="41" width="140"><b>{name}</b></td>
+				</tr>
+			</table>
+	<!-- #END flash -->
+<!-- END html -->
+

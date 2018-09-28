@@ -1,0 +1,39 @@
+<!-- BEGIN html -->
+
+	<!-- #BEGIN diary.list -->
+		<div class='folder' style='float: left; text-align: center; cursor: pointer; margin: 5px 15px 5px 15px;' onclick="{url}" title='{title}'>
+			<img src='images/icon/folder.gif' border='0'><br>
+			{name}
+		</div>
+	<!-- #END diary.list -->
+
+
+
+
+
+
+
+
+	<!-- #BEGIN gallery.top.list -->
+		<div align='center' class="right-main" style='height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+				<hl><a href='javascript:;' onclick="viewpages('main','gallery=home');web_title('Gallery - Home');" title='Gallery - Home'>Gallery</a></hl> - <b>Danh sach chu de</b>
+		</div>
+		<div class="right-main" style='height: 22px;'>
+				<div style='float: left; padding: 2px;'>{lang.total}: <b>{total}</b></div>
+				<div class='gallery-tool' style='float: right;' title='{lang.add_category}' onclick="{add.category}"><img src='{skin.link}/images/gift.gif' border='0'></div>				
+		</div>
+		<br>
+		<div class='right-main'>
+			{cat.list}
+		</div>
+	<!-- #END gallery.top.list -->
+	
+	<!-- #BEGIN gallery.list -->
+		<div class='folder' style='float: left; text-align: center; cursor: pointer; margin: 5px 15px 5px 25px;' onclick="{url}" title='{title}'>
+			<img src='{skin.link}/images/folder.jpg' border='0'><br>
+			{name}
+		</div>
+	<!-- #END gallery.list -->
+
+
+<!-- END html -->

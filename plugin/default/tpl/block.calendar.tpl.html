@@ -1,0 +1,51 @@
+<!-- BEGIN list -->
+<!-- calendar ----------->
+<!-- #BEGIN cal_top -->
+<table width='250' border='0' cellspacing='0' cellpadding='0' style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px">
+    <tr class='{class}'>
+        <td width='25' colspan='1' style="border-bottom-style: none; border-bottom-width: medium">
+        <p align="center">
+        <img src="images/icon/pre.png" onClick="calendar_change_month('{type}',{premonth})" style='cursor:pointer;'>
+        </td>
+        <td width='150' align="center" colspan='5'>
+        <span class='title'><span style="background-color: #FFFFFF">&nbsp;{month.url}{monthname}</a> -  {year.url}{year} </a>
+		</span></span><span style="background-color: #FFFFFF"><br>&nbsp;<a href='javascript: void(0);' onclick="calendar_change_month('{type}',0)">{lang.today}</a></span><span style="background-color: #FFFFFF">&nbsp;
+		</span>
+        </td>
+        <td width='25' colspan='1' align='right' style="border-bottom-style: none; border-bottom-width: medium">
+        <p align="center">
+        <img src="images/icon/next.png" onClick="calendar_change_month('{type}',{nextmonth})" style='cursor:pointer;'>
+        </td>
+    </tr>
+    <tr>
+        <td class='head' align="center" width='25' height="25" style="border: medium none #C0C0C0">
+		<font color="#FF9900"><b>CN</b></font></td>
+        <td class='head' align="center" width='25' height="25" style="border: medium none #C0C0C0">
+		<font color="#FF9900"><b>T2</b></font></td>
+        <td class='head' align="center" width='25' height="25" style="border: medium none #C0C0C0">
+		<font color="#FF9900"><b>T3</b></font></td>
+        <td class='head' align="center" width='25' height="25" style="border: medium none #C0C0C0">
+		<font color="#FF9900"><b>T4</b></font></td>
+        <td class='head' align="center" width='25' height="25" style="border: medium none #C0C0C0">
+		<font color="#FF9900"><b>T5</b></font></td>
+        <td class='head' align="center" width='25' height="25" style="border: medium none #C0C0C0">
+		<font color="#FF9900"><b>T6</b></font></td>
+        <td class='head' align="center" width='25' height="25" style="border: medium none #C0C0C0">
+		<font color="#FF9900"><b>T7</b></font></td>
+    </tr>
+    <tr>
+<!-- #END cal_top -->
+
+<!-- #BEGIN cal_list -->
+{td}
+	<td align='center' width='25' style="border-style: none; border-width: medium"><font {class}>{url}{day}{eurl}</font></td>
+{tr}
+<!-- #END cal_list -->
+
+<!-- #BEGIN calendar -->
+	<div id="calendar">
+		{top}{list}</table>
+	</div>
+<!-- #END calendar -->
+
+<!-- END list -->

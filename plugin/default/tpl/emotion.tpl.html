@@ -1,0 +1,54 @@
+<!-- BEGIN html -->
+	<!-- #BEGIN emotion.top -->
+	<style type="text/css">
+	.img{
+		cursor:pointer;
+		width: 24px;
+		height: 22px;
+	}
+	.img{
+		padding: 4px;
+		background-color: #c0c0c0;
+		float: left;
+		text-align: center;
+		margin: 1px;
+	}
+	.img:hover{
+		padding: 4px;
+		background-color: #ff9797;
+		float: left;
+		text-align: center;
+	}
+	.close{
+		cursor:pointer;
+		padding: 3px;
+		background-color: #ff9797;
+		float: left;
+		text-align: center;
+	}
+	.close:hover{
+		padding: 3px;
+		background-color: red;
+		font-color: #ffffff;
+		float: left;
+		text-align: center;
+	}
+</style>
+<table border="0" cellpadding="0" cellspacing="0" style="padding: 10px;"><tr><td>
+<div style='float:left;'>
+	<font color="#FF0000"><span style="font-family: arial, verdana, helvetica; font-size: 14px; font-weight: bold;">{lang.insert_emotion}:</span></font></div>
+<div style='float: right; height: 15px; width: 35px;' class='close' title='close' onclick="hideform('emot');"><b>[X]</b></div>
+<table width="320" border="0" cellpadding="0" cellspacing="0" style="background-color: #F7F7F7; border: 2px solid #FFFFFF; padding: 5px;">
+ <tr>
+  	<td>{list}</td>
+ </tr>
+</table>
+</tr></td></table>
+<!-- #END emotion.top -->
+
+<!-- #BEGIN emotion.list -->
+<div class='img'>{img}</div>
+<!-- #END emotion.list -->
+</body>
+</html>
+<!-- END html -->

@@ -1,0 +1,42 @@
+<!-- BEGIN html -->
+	<!-- #BEGIN block.new -->
+		&nbsp;&nbsp;<a href='javascript: void(0);' onclick="{url}" title='{title}'>{name}</a><br>
+	<!-- #END block.new -->
+	
+	<!-- #BEGIN block.new.gallery -->
+		<div style='float: left; width: 60px; margin: 5px 8px 0 8px;'>
+			<img src='{thumb}' class='image2' width='60' height='60' onclick="{url}" title='{title}'>
+		</div>
+	<!-- #END block.new.gallery -->
+	
+	<!-- moi viet co tab -->
+	<!-- #BEGIN block.new.tab -->
+		<table width='100%'>
+			<tr>
+				<td>
+					<div id='{type}-new-boy-box'>
+						{boy}
+					</div>
+					<div id='{type}-new-girl-box' style='display:none;'>
+						{girl}
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div align='right' style='padding-right: 5px; width: 100%;'>
+						<a href='javascript: void(0);' onclick="change_tab('{type}-new-girl','{type}-new-boy');" title='{lang.post_by} {lang.boy_love}'><img src='images/icon/boy.jpg' border='0'></a> 
+						<a href='javascript: void(0);' onclick="change_tab('{type}-new-boy','{type}-new-girl');" title='{lang.post_by} {lang.girl_love}'><img src='images/icon/girl.jpg' border='0'></a>
+					</div>
+				</td>
+			</tr>
+		</table>
+	<!-- #END block.new.tab -->
+	
+	<!-- #BEGIN singer.list -->
+		<div style="height: 250px; width: 97%; overflow:auto; border: 0px; padding-left: 3px;">
+			{list}
+		</div>
+	
+	<!-- #END singer.list -->
+<!-- END html -->

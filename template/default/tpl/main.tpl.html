@@ -1,0 +1,84 @@
+<!-- BEGIN html -->
+	<!-- #BEGIN home -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $('div.right-menu').click(function () {
+		        $('div.right-top div.selected').removeClass('selected').addClass('right-menu');
+		        $(this).removeClass('right-menu').addClass('selected');
+		    });
+		    today();
+            load_message();
+        });
+	</script>
+	
+				<div id='head' class='head'>
+                    <div style='float: left; margin-top: 30px;'>
+    					<div class='avatar' style='float: left;20px;' align='center'>
+    						<span onmouseout="hide_tooltip()" onmouseover="show_tooltip('<img src=\'{avatar}\'>','click');"><img src='{avatar}' width='75' height='72' border="0"></span>
+    					</div><!-- end avatar -->
+                    </div>
+                    <div style='float: left; margin-top: 20px;'>
+							{mem.panel}
+                    </div>
+					<div id='play' style='height: 260px;' style='margin-left: -15px;' class='music-play'>
+							{playlist}
+					</div>
+				</div>
+				<div class='main'>
+					<div class='top'>
+					  <div class='left-top'></div>
+						<div class='right-top'>
+							    <div class='right-menu selected' onclick="loadmain('Home','main','home=main');" title="Home">Home</div>
+								<div class='right-menu' onclick="loadmain('Diary','main','diary=home');" title="Diary">Diary</div></a>
+								<div class='right-menu' onclick="loadmain('Gallery','main','gallery=home');" title="Diary">Gallery</div>
+								<div class='right-menu' onclick="loadmain('Music','main','music=home');" title="Music">Music</div>
+								<div class='right-menu' onclick="viewpages('main','wish=home');web_title('Wish');" title="Wish">Wish</div>
+								<div class='right-menu' onclick="viewpages('main','about=home');web_title('About');"  title="About">About</div><br>
+                                <div align='left'><i id='today'></i></div>
+						</div>
+					</div>
+					<table>
+						<tr>
+							<td>
+								<div class='left'>
+										<div  id='blockmain'>
+											{block}
+										</div>
+								</div>
+								<div class='right'>
+										<div id='main'>{main}</div>
+								</div>
+							</td>
+						</tr>
+					</table>	
+				</div>
+				<div class='bottom'></div>		
+	<!-- #END home -->
+
+    <!-- #BEGIN home.main -->
+    	<div style='float: left; width: 460px;'>
+				<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+					<hl>{lang.diary_new}:</hl><br>
+				</div>
+					<div class='right-main'>{diary.new_boy}	{diary.new_girl}</div>
+				
+		</div>
+		
+		<div style='float: left; width: 460px;'>
+			<div style='float: left; width: 460px;'>
+				<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+					<hl>{lang.gallery_new}:</hl>
+				</div>
+					{gallery.new}<br>
+			</div>
+			
+			<div style='float: left; width: 460px;'>
+				<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+					<hl>{lang.music_new}:</hl>
+				</div><br />
+					{music.new}
+			</div>
+
+		</div>
+    <!-- #END home.main -->
+<!-- END html -->

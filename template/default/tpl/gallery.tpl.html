@@ -1,0 +1,254 @@
+<!-- BEGIN html -->
+	<!-- #BEGIN home -->
+		<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+				<hl><a href='javascript:;' onclick="viewpages('main','gallery=home');web_title('Gallery - Home');" title='Gallery - Home'>Gallery</a></hl> - <b>Home</b>
+		</div>
+		<div style='float: left; width: 460px;'>
+			<div class='gallery-tool' style='float: right; border-top: 1px;' title='{lang.add_pic}' onclick="{upload.link}"><img src='{skin.link}/images/photo.png' border='0'></div>
+			<div class='gallery-tool' style='float: right; border-top: 1px;' title='{lang.album_list}' onclick="viewpages('main','gallery=album_list');web_title('Gallery - {lang.album_list}');"><img src='{skin.link}/images/album.gif' width='16' border='0'></div>
+			<div class='gallery-tool' style='float: right; border-top: 1px;' title='{lang.category_list}' onclick="viewpages('main','gallery=category_list');web_title('Gallery - {lang.category_list}');"><img src='{skin.link}/images/gift.gif' width='16' height='16' border='0'></div>
+		
+		</div> 
+
+		<div style='float: left; width: 460px;'>
+			<div style='float: left; width: 460px;'>
+				<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+					<hl>{lang.category_new}:</hl>
+				</div>
+					{cat.new}<br>
+			</div>
+			<div style='float: left; width: 460px;'>
+				<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+					<hl>{lang.gallery_new}:</hl><br>
+				</div>
+					{pic.new}<br>
+				
+			</div>
+
+			<div style='float: left; width: 460px;'>
+				<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+					<hl>{lang.new_album}:</hl>
+				</div>
+					{album.new}
+			</div>
+
+		</div>
+	<!-- #END home -->
+	
+		
+	
+	
+	<!-- #BEGIN album.top.list -->
+		<div class='right-main'>
+			<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+				<hl><a href='javascript:;' onclick="viewpages('main','gallery=home');web_title('Gallery - Home');" title='Gallery - Home'>Gallery</a></hl><b> - {lang.album_list}:</b>
+			</div>
+			<div style='width: 460px; height: 22px;'>
+				<div style='float: left; padding: 2px;'>{lang.total}: <b>{total}</b></div>
+				<div class='gallery-tool' style='float: right;' title='{lang.add_pic}' onclick="{upload.link}"><img src='{skin.link}/images/photo.png' border='0'></div>
+				<div class='gallery-tool' style='float: right;' title='{lang.add_album}' onclick="{add.album}"><img src='{skin.link}/images/album.gif' height="16" border='0'></div>
+			</div>
+			<div style='display: {sub.show}; width: 460px; float: left; border: 1px solid #c0c0c0; border-top: 0px; padding: -1px;'>
+				<div align='center' style='float: left; width: 460px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+					<hl>{lang.category_sub_list}</hl><br>
+				</div>
+				{sub.cat}
+			</div>
+			<div style='width: 460px; float: left;'>
+				{album.list}<br>
+			</div>
+
+		</div>
+		{pages}
+	<!-- #END album.top.list -->
+	
+	
+	
+	
+
+	<!-- #BEGIN album.list -->
+		<div id='gallery-album-{id}' style='float: left; cursor: pointer; margin: 7px;' onMouseOver="$('#gallery-album-{id}-detail').show();" onMouseOut="$('#gallery-album-{id}-detail').hide();rate_content('tool_content_{id}','');" title='{title}'>
+			<div class='album'>
+				<div id='gallery-album-{id}-thumb' style="background: transparent url({thumb}) no-repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+					<img src="{skin.link}/images/blank.gif" width="100" height="100">
+				</div>
+				<div id='gallery-album-{id}-detail' style='display: none; margin-top:-100px; height: 95px; padding-top: 5px; width: 100px; background: url({skin.link}/images/loadingbg.png) repeat; text-align: center;'>
+						<center><font color="#FFFFFF">{lang.total_pic}: </font><font color="#AA1818"><b>{total.pic}</b></font></center><br>
+						<span onmouseover="rate_content('tool_content_{id}','{lang.view_list}');" class='gallery-tool' style='padding-top: 8px; margin-bottom: 5px;' onclick="{url}"><img src='{skin.link}/images/photo.png' border='0'></span>&nbsp;
+						<span onmouseover="rate_content('tool_content_{id}','{lang.slide}');" class='gallery-tool' style='padding-top: 8px; margin-bottom: 5px;' onclick="{slide.link}"><img src='{skin.link}/images/slide.gif' border='0'></span>
+						<center><i><font color='#ffffff'><span id='tool_content_{id}'></span></font></i></center>
+				</div>
+				<p align='center'><font color="#AA1818"><b>{name}</b></font></p>
+			</div>
+		</div>
+	<!-- #END album.list -->
+	
+	
+	<!-- #BEGIN gallery.top.list -->
+	<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+				<hl><a href='javascript:;' onclick="viewpages('main','gallery=home');web_title('Gallery - Home');" title='Gallery - Home'>Gallery</a> - <a href='javascript:;' title='{lang.album_list}' onclick="viewpages('main','gallery=album_list');">{lang.album_list}</a></hl> - <b>{album.name}</b>
+	</div><br>
+	<div class='right-main'>
+		<div align='center' style='width: 460px;'>
+		<div style='float: left; width: 222px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+			Album: <font color="#AA1818"> <b>{album.name}</b>
+		</font>
+		</div>
+		<div style='float: left; width: 222px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; border-left: 0px; text-align: left; padding-left: 5px;'>
+			{lang.viewed}: <font color="#AA1818"> <b>{view}</b>
+		</font>
+		</div>
+		<div style='float: left; width: 222px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px; border-top: 0px;'>
+			{lang.post_by}: <b>{user}</b>
+		</div>
+		<div style='float: left; width: 222px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; border-left: 0px; border-top: 0px; text-align: left; padding-left: 5px;'>
+			{lang.total_pic}: <font color="#AA1818"><b>{total}</b></font>
+		</div>
+		<div style='float: left; width: 450px; margin-bottom: 10px; background-color: #fff; border: 1px solid #c0c0c0; text-align: left; border-top: 0px; padding-left: 5px;'>
+			<div style='float: left;'>{content}</div>
+			
+			<div class='gallery-tool' style='float: right;' title='{lang.add_pic}' onclick="{upload.link}"><img src='{skin.link}/images/photo.png' border='0'></div>
+			<div class='gallery-tool' style='float: right;' title='{lang.slide}' onclick="{slide.link}"><img src='{skin.link}/images/slide.gif' border='0'></div>
+             <div style='display:{tool.show};' id='gallery-info-tool-{id}'>
+					<div class='gallery-tool' style='float: right;'>{delete}</div>
+					<div class='gallery-tool' style='float: right;'>{edit}</div>
+			 </div>
+        </div>
+	</div>
+		{gallery.list}<br>
+		<div style="width: 460px; float: left; text-align: right;">
+			<span class='redbutton' onclick="{upload.link}" title="{lang.add_pic}">{lang.add_pic}</span>
+		</div>
+	</div>
+		{pages}
+	<!-- #END gallery.top.list -->
+	
+	
+	
+	<!-- #BEGIN gallery.list -->
+		<div id='gallery-{id}' style='float: left; cursor: pointer; margin: 7px;' onMouseOver="$('#gallery-{id}-detail').show();" onMouseOut="$('#gallery-{id}-detail').hide();" title='{title}'>
+			<div class='photo'>
+               <div style="padding: 2px; width: 85px; margin: 2px; height: 85px; background-color: #000;">
+					<img class="folder" onclick="{url}" src="{thumb}" width="85" height="85">
+				</div>
+				<div id='gallery-{id}-detail' style='margin-bottom: -19px; height: 30px; display: none; text-align: center;'>
+						<div style='height: 30px; margin-top: -10px; text-align: right; width: 90px;'>
+							<div style='height: 30px; display: {tool.show};'>
+								<img style='cursor: pointer;' src='images/icon/edit.gif' border='0' onclick="{edit.link}" title='Edit'>
+								<img style='cursor: pointer;' src='images/icon/delete.gif' border='0' onclick="{del.link}" title='Delete'>
+							</div>
+						</div>
+				</div>
+                	<p align='center'><font color="#AA1818"><b>{name}</b></font></p>
+			</div>
+            <br />
+		</div>
+	<!-- #END gallery.list -->
+	
+	
+	
+	<!-- #BEGIN gallery.view -->
+			<hl>Gallery - <a href='javascript:;' onclick="{album.url}" title="Album {album.name}">{album.name}</hl></a>
+			<div align='center' style='width: 100%;'>
+				<div style='float: left; width: 230px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+					{lang.title}: <font color="#AA1818"> <b>{title}</b>
+				</font>
+				</div>
+				<div style='float: left; width: 230px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; border-left: 0px; text-align: left; padding-left: 5px;'>
+					{lang.viewed}: <font color="#AA1818"> <b>{view}</b>
+				</font>
+				</div>
+				<div style='float: left; width: 230px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px; border-top: 0px;'>
+					{lang.post_by}: <b>{user}</b>
+				</div>
+				<div style='float: left; width: 230px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; border-left: 0px; text-align: left; border-top: 0px; padding-left: 5px;'>
+					<div style='float: left;'>{lang.rate}:&nbsp;</div>
+						<div id="gallery_star"  onmouseover="show_rating_process()" onmouseout="hide_rating_process()" style="float: left;">
+							<div id="rate_s" style="float: left; height: 20px;">{star}</div>
+							<div id="rating_process" style="display:none;" style="float: left;">
+								<div style="float: left;">
+									<a href="javascript:void(0);" onclick="return rate('gallery',{id},1);" onmouseover="show_star(1);rate_content('rate_content','Quá xấu');" title="1 {lang.star}"> 
+									<img id=star1 src="{skin.link}/images/star/none.png" border="0"></a>
+									<a href="javascript:void(0);" onclick="return rate('gallery',{id},2);" onmouseover="show_star(2);rate_content('rate_content','Xấu');" title="2 {lang.star}"> 
+									<img id=star2 src="{skin.link}/images/star/none.png" border="0"></a>
+									<a href="javascript:void(0);" onclick="return rate('gallery',{id},3);" onmouseover="show_star(3);rate_content('rate_content','&#272;&#432;&#7907;c');" title="3 {lang.star}"> 
+									<img id=star3 src="{skin.link}/images/star/none.png" border="0"></a>
+									<a href="javascript:void(0);" onclick="return rate('gallery',{id},4);" onmouseover="show_star(4);rate_content('rate_content','Đẹp');" title="4 {lang.star}"> 
+									<img id=star4 src="{skin.link}/images/star/none.png" border="0"></a>
+									<a href="javascript:void(0);" onclick="return rate('gallery',{id},5);" onmouseover="show_star(5);rate_content('rate_content','Rất đẹp');" title="5 {lang.star}"> 
+									<img id=star5 src="{skin.link}/images/star/none.png" border="0"></a>
+								</div>
+								<i><font color='#666666'><div style="float: left; padding-left: 5px;" id='rate_content'></div></font></i>
+							</div>
+						</div>
+					</div>
+				<div style='float: left; width: 460px; margin-bottom: 10px; background-color: #fff; border: 1px solid #c0c0c0; text-align: left; border-top: 0px; padding-left: 5px;'>
+					<div style='float: left;'>{content}</div>
+					<div class='gallery-tool' style='float: right;' title='{lang.slide}' onclick="{slide.link}"><img src='{skin.link}/images/slide.gif' border='0'></div>
+					<div class='gallery-tool' style='cursor: help;float: right;' title='{date}'><img src='{skin.link}/images/calendar.png' width='16' border='0'></div>
+				</div> 
+		
+				<div style='width: 100%;' align='center'>
+						<center><img src='{skin.link}/images/slide-top.jpg' style='margin-bottom: 0px;'></center>
+						<div style='padding-top: 3px; padding-bottom: 3px; border: 1px solid #c0c0c0; background-color: #EAEAEA; width: 358px; text-align: center;'>
+							<a href='{link}' class="highslide" onclick="return hs.expand(this)" title='{title}'>
+								<img alt='{title}' src='{link}' border='0' onload="HSImageResizer.createOn(this);">
+							</a>
+						</div>
+						<center><img src='{skin.link}/images/slide-bottom.jpg'></center>
+				</div>
+			</div>
+			<div style='width: 460px;'>
+				<div style='float: left;'align='center'>{prev}</div>
+				<div style='float: right; margin-right: 25px;' align='center'>{next}</div>
+			</div>	
+			<table height='25'><tr><td></td></tr></table>
+			<div style='width: 95%'>
+				<hl>Comment: ( {comment.total} )</hl><br><br>
+				<div id='gallery-comment-list'>
+					{comment.list}
+				</div>
+			</div>
+			<div style='width: 460px; padding-left: 5px;'>
+				{comment.new}
+			</div>
+	<!-- #END gallery.view -->
+
+
+
+
+
+	<!-- #BEGIN gallery.slide -->
+			<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+				<hl><a href='javascript:;' onclick="viewpages('main','gallery=home');web_title('Gallery - Home');" title='Gallery - Home'>Gallery</a>
+					 - <a href='javascript:;' title='{lang.album_list}' onclick="viewpages('main','gallery=album_list');">{lang.album_list}</a>
+					  - <a href='javascript:;' onclick="{album.url}" title="Album {album.name}">Album: {album.name}</a></hl><b> - {lang.slide}:</b>
+			</div>
+			<br>
+			<div align='center' style='width: 460px; margin-left: -5px;'>
+				<center><img src='{skin.link}/images/slide-top.jpg'></center>
+				<div class='image' style='width: {width}px;' id='gallery-slide'>
+					<embed 
+		  				src="images/image_slide.swf" 
+		  				width="{width}"
+		  				height="{height}"
+		 				allowscriptaccess="always" 
+		  				allowfullscreen="true" 
+		  				flashvars="file={xml.link}&transition=random&allowSciptAccess=always&overstretch=false&wmode=opaque&screencolor=0x000000"
+					/>
+				</div>
+				<center><img src='{skin.link}/images/slide-bottom.jpg'></center>
+			</div>
+			<br>
+			<hl>{lang.album_more}:</hl><br>
+			{album.more}
+		<!-- #END gallery.slide -->
+	
+	
+	
+	
+		
+<!-- END html -->
+
+
+

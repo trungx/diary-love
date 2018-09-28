@@ -1,0 +1,176 @@
+<style type="text/css">
+	.bbcode-button{
+		cursor:pointer;
+		width: 16px;
+		padding: 2px;
+	}
+	.bbcode-button{
+		/*background-color: #c0c0c0;*/
+		float: left;
+		text-align: center;
+		margin: 1px;
+	}
+	.bbcode-button:hover{
+		background-color: #ff9797;
+		float: left;
+		text-align: center;
+	}
+</style>
+<style type="text/css">
+			#emot{
+				/* Netscape 4, IE 4.x-5.0/Win and other lesser browsers will use this */
+              background: url('template/default/images/loadingbg.png') repeat;
+			  position: absolute; left: 0px; top: 0px;
+			  margin-top: 20%;
+			  margin-left: 35%;
+			}
+			div#emot {
+			  /* used by Opera 5+, Netscape6+/Mozilla, Konqueror, Safari, OmniWeb 4.5+, iCab, ICEbrowser */
+			  position: fixed;  left: 0px; top: 0px;
+			}
+
+		</style>
+		<![if lt IE 7]>
+		<style type="text/css">
+		div#emot{
+		  /* IE5.5+/Win - this is more specific than the IE 5.0 version */
+		  left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+		  top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+		}
+		</style>
+		<![endif]>
+<div id='emot' class='emot'></div>
+<!-- BEGIN html -->
+
+<!-- #BEGIN mini -->
+<div align="center">	
+<table cellpadding="4" cellspacing="0" width="352" height="3" style="border-width:0px; ">
+	<!-- MSTableType="nolayout" -->
+	<tr>
+		<td height="1" align="left" valign="top" style="border-left:1px solid #C0C0C0; border-right:1px solid #C0C0C0; border-top:1px solid #C0C0C0; " background="images/bg-editor.jpg">
+					<img class='bbcode-button' style="cursor:pointer;" onMouseOver="helpline('b')" src="images/editor/bold.gif" onclick="bbstyle(0)" title="{lang.bold}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/italic.gif" onclick="bbstyle(2)" title="{lang.italic}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/underline.gif" onclick="bbstyle(4)" title="{lang.underline}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/strikethrough.gif" onclick="bbstyle(16)" title="{lang.between}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/backcolor.gif" onclick="bbstyle(18)" title="{lang.highlight}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/quote.gif" onclick="bbstyle(6)" title="{lang.quote}" />  
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/url.gif" onclick="addurl()" title="{lang.link}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/email.gif" onclick="addemail()" title="{lang.email}" />  
+					<a title="{lang.insert_emotion}" href="javascript: void(0);" onclick="showemot()">
+					<img class='bbcode-button' border=0 src="images/editor/smile.gif"></a>&nbsp;<select onChange="showcolor(this.options[this.selectedIndex].value);this.options[0].selected='selected';" name=color>
+<option value="#define#" selected>{lang.font_color_select}</option>
+<option value="#87CEEB" style="background-color:#87CEEB">{lang.blue_sky}</option>
+<option value="#4169E1" style="background-color:#4169E1">{lang.royal_blue}</option>
+<option value="#0000FF" style="background-color:#0000FF">{lang.blue}</option>
+<option value="#00008B" style="background-color:#00008B">{lang.blue_dark}</option>
+<option value="#FFA500" style="background-color:#FFA500">{lang.orange}</option>
+
+<option value="#FF4500" style="background-color:#FF4500">{lang.pink_light}</option>
+<option value="#DC143C" style="background-color:#DC143C">{lang.pink_dark}</option>
+<option value="#FF0000" style="background-color:#FF0000">{lang.red}</option>
+<option value="#B22222" style="background-color:#B22222">{lang.red_dark}</option>
+<option value="#8B0000" style="background-color:#8B0000">{lang.brown}</option>
+<option value="#008000" style="background-color:#008000">{lang.green}</option>
+<option value="#32CD32" style="background-color:#32CD32">{lang.green_light}</option>
+<option value="#FF1493" style="background-color:#FF1493">{lang.pink}</option>
+
+<option value="#FF6347" style="background-color:#FF6347">{lang.red_light}</option>
+<option value="#800080" style="background-color:#800080">{lang.puple}</option>
+<option value="#4B0082" style="background-color:#4B0082">{lang.indigo}</option>
+<option value="#DEB887" style="background-color:#DEB887">{lang.mahogany}</option>
+<option value="#F4A460" style="background-color:#F4A460">{lang.sand}</option>
+<option value="#A0522D" style="background-color:#A0522D">{lang.soil}</option>
+<option value="#D2691E" style="background-color:#D2691E">{lang.chocolate}</option>
+<option value="#008080" style="background-color:#008080">{lang.moss}</option>
+
+<option value="#C0C0C0" style="background-color:#C0C0C0">{lang.silver}</option>
+<option value="#define#">{lang.select}</option>
+</select>
+		</div>
+		</div>		
+								</td>
+	</tr>
+</table>
+<!-- #END mini -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #BEGIN full -->
+
+<div align="center">	
+<table cellpadding="4" cellspacing="0" width="380" height="3" style="border-width:0px; ">
+	<!-- MSTableType="nolayout" -->
+	<tr>
+		<td height="1" align="left" valign="top" style="border-left:1px solid #C0C0C0; border-right:1px solid #C0C0C0; border-top:1px solid #C0C0C0; " background="images/bg-editor.jpg">
+					<img class='bbcode-button' style="cursor:pointer;" onMouseOver="helpline('b')" src="images/editor/bold.gif" onclick="bbstyle(0)" title="{lang.bold}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/italic.gif" onclick="bbstyle(2)" title="{lang.italic}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/underline.gif" onclick="bbstyle(4)" title="{lang.underline}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/strikethrough.gif" onclick="bbstyle(16)" title="{lang.between}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/backcolor.gif" onclick="bbstyle(18)" title="{lang.highlight}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/quote.gif" onclick="bbstyle(6)" title="{lang.quote}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/insertimage.gif" onclick="addimage()" title="{lang.insert_image}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/url.gif" onclick="addurl()" title="{lang.link}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/email.gif" onclick="addemail()" title="{lang.email}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/justifyleft.gif" onclick="bbstyle(8)" title="{lang.align_left}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/justifycenter.gif" onclick="bbstyle(12)" title="{lang.align_center}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/justifyright.gif" onclick="bbstyle(10)" title="{lang.align_right}" />
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/swf.gif" onclick="addmedia('flash')" title="{lang.insert_swf}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/flv.gif" onclick="addmedia('flv')" title="{lang.insert_flv}" /> 
+					<img class='bbcode-button' style="cursor:pointer;" src="images/editor/multimedia.gif" onclick="addmedia('music')" title="{lang.insert_music}" /> 
+					<a title="{lang.insert_emotion}" href="javascript: void(0);" onclick="showemot()">
+					<img class='bbcode-button' border=0 src="images/editor/smile.gif"></a> <select onChange="showsize(this.options[this.selectedIndex].value);this.options[0].selected='selected';" name=size>					
+					<option value="" selected>{lang.select_size}</option>
+					<option value="9px">9px</option>
+					<option value="10px">10px</option>
+					<option value="12px">12px</option>
+					<option value="14px">14px</option>
+					<option value="16px">16px</option>
+					<option value="18px">18px</option>
+					<option value="#define#">{lang.select}</option>
+					</select>&nbsp;<select onChange="showcolor(this.options[this.selectedIndex].value);this.options[0].selected='selected';" name=color>
+<option value="#define#" selected>{lang.font_color_select}</option>
+<option value="#87CEEB" style="background-color:#87CEEB">{lang.blue_sky}</option>
+<option value="#4169E1" style="background-color:#4169E1">{lang.royal_blue}</option>
+<option value="#0000FF" style="background-color:#0000FF">{lang.blue}</option>
+<option value="#00008B" style="background-color:#00008B">{lang.blue_dark}</option>
+<option value="#FFA500" style="background-color:#FFA500">{lang.orange}</option>
+
+<option value="#FF4500" style="background-color:#FF4500">{lang.pink_light}</option>
+<option value="#DC143C" style="background-color:#DC143C">{lang.pink_dark}</option>
+<option value="#FF0000" style="background-color:#FF0000">{lang.red}</option>
+<option value="#B22222" style="background-color:#B22222">{lang.red_dark}</option>
+<option value="#8B0000" style="background-color:#8B0000">{lang.brown}</option>
+<option value="#008000" style="background-color:#008000">{lang.green}</option>
+<option value="#32CD32" style="background-color:#32CD32">{lang.green_light}</option>
+<option value="#FF1493" style="background-color:#FF1493">{lang.pink}</option>
+
+<option value="#FF6347" style="background-color:#FF6347">{lang.red_light}</option>
+<option value="#800080" style="background-color:#800080">{lang.puple}</option>
+<option value="#4B0082" style="background-color:#4B0082">{lang.indigo}</option>
+<option value="#DEB887" style="background-color:#DEB887">{lang.mahogany}</option>
+<option value="#F4A460" style="background-color:#F4A460">{lang.sand}</option>
+<option value="#A0522D" style="background-color:#A0522D">{lang.soil}</option>
+<option value="#D2691E" style="background-color:#D2691E">{lang.chocolate}</option>
+<option value="#008080" style="background-color:#008080">{lang.moss}</option>
+
+<option value="#C0C0C0" style="background-color:#C0C0C0">{lang.silver}</option>
+<option value="#define#">{lang.select}</option>
+</select>
+		</div>	
+		</div>		
+								</td>
+	</tr>
+</table>	
+<!-- #END full -->
+<!-- END html -->

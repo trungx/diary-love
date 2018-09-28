@@ -1,0 +1,300 @@
+<!-- BEGIN html -->
+    <!-- #BEGIN config -->
+    <script type="text/javascript">
+            $('.so').numeric();
+    </script>
+    <div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+  	    <b>{lang.config}</b>
+  	</div>
+
+    <div style="float: left; margin: 3px; width: 120px; padding-left: 25px;">
+            <b>{lang.web_title}:</b>
+    </div>
+    <div style="float: left; margin: 3px; width: 200px; padding-left: 5px;">
+            <input id="web_title" type="text" value="{web.title}" size="32" />
+    </div>
+
+    <div style="float: left; margin: 3px; width: 120px; padding-left: 25px;">
+            <b>{lang.web_avatar}:</b>
+    </div>
+    <div style="float: left; margin: 3px; width: 200px; padding-left: 5px;">
+            <input id="web_avatar" type="text" value="{web.avatar}" size="32" />
+    </div>
+
+    <div style="float: left; margin: 3px; width: 120px; padding-left: 25px;">
+            <b>{lang.web_language}:</b>
+    </div>
+    <div style="float: left; margin: 3px; width: 200px; padding-left: 5px;">
+            {web.language}
+    </div>
+
+    <div style="float: left; margin: 3px; width: 120px; padding-left: 25px;">
+            <b>{lang.web_template}:</b>
+    </div>
+    <div style="float: left; margin: 3px; width: 200px; padding-left: 5px;">
+            {web.skin}
+    </div>
+
+    <div style="float: left; margin: 3px; width: 120px; padding-left: 25px;">
+            <b>{lang.timezone}:</b>
+    </div>
+    <div style="float: left; margin: 3px; width: 200px; padding-left: 5px;">
+            {web.timezone}
+    </div>
+
+    <div style="float: left; margin: 3px; width: 120px; padding-left: 25px;">
+            <b>{lang.diary_limit}:</b>
+    </div>
+    <div style="float: left; margin: 3px; width: 200px; padding-left: 5px;">
+            <input class='so' id="diary_limit" type="text" value="{diary.limit}" size="25" />&nbsp;<font color="red"><b>*</b></font>
+    </div>
+
+    <div style="float: left; margin: 3px; width: 120px; padding-left: 25px;">
+            <b>{lang.gallery_limit}:</b>
+    </div>
+    <div style="float: left; margin: 3px; width: 200px; padding-left: 5px;">
+            <input class='so' id="gallery_limit" type="text" value="{gallery.limit}" size="25" />&nbsp;<font color="red"><b>*</b></font>
+    </div>
+
+    <div style="float: left; margin: 3px; width: 120px; padding-left: 25px;">
+            <b>{lang.music_limit}:</b>
+    </div>
+    <div style="float: left; margin: 3px; width: 200px; padding-left: 5px;">
+            <input class='so' id="music_limit" type="text" value="{music.limit}" size="25" />&nbsp;<font color="red"><b>*</b></font>
+    </div>
+
+    <div style="float: left; margin: 3px; width: 120px; padding-left: 25px;">
+            <b>{lang.wish_limit}:</b>
+    </div>
+    <div style="float: left; margin: 3px; width: 200px; padding-left: 5px;">
+            <input class='so' id="wish_limit" type="text" value="{wish.limit}" size="25" />&nbsp;<font color="red"><b>*</b></font>
+    </div>
+
+
+    <div style="float: left; margin: 3px; width: 120px; padding-left: 25px;">
+            <b>{lang.web_badword}:</b>
+    </div>
+    <div style="float: left; margin: 3px; width: 200px; padding-left: 5px;">
+            <textarea cols="25" rows="3" id="badword">{web.badword}</textarea>
+    </div>
+    <div style='width: 460px; float: left;'>
+      <p align="center" style='padding-left: 32%;'>
+              <span title="{lang.submit}" class="redbutton" onclick="web_config_check();">{lang.submit}</span>
+              <span title="{lang.cancel}" class="bluebutton" onclick="viewpages('cmain','member=main');">{lang.cancel}</span>
+      </p>
+    </div>
+    <!-- #END config -->
+
+
+    <!-- #BEGIN cat.top -->
+        <div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+  	        <b>{lang.category}</b>
+    	</div>
+        <p align="right">{lang.select}: {select.mode}</p>
+        {cat.list}
+        <div style="float: right;">
+            <span class='redbutton' title="{lang.add_category}" onclick="viewpages('cmain','admin=category_add&type={type}');">New</span>
+        </div>
+    <!-- #END cat.top -->
+
+    <!-- #BEGIN cat.list -->
+        <div id='cat-{id}'>
+            <div style="float: left; width: 85%"><img src="images/icon/folder.gif" border="0" />&nbsp;<b><a href="javascript:;" onclick="{url}" title="{name}">{name}</a></b> <i>( {total} )</i></div>
+            <div style="float: right; width: 15%;">{edit} {delete}</div>
+        </div>
+        {sub.list}
+    <!-- #END cat.list -->
+
+    <!-- #BEGIN sub.list -->
+        <div id='cat-{id}'>
+            <div style="float: left; width: 85%">&nbsp;&nbsp;<img src="images/icon/sub.gif" border="0" />&nbsp;
+            <a href="javascript:;" onclick="{url}" title="{name}">{name}</a> <i>( {total} )</i></div>
+            <div style="float: right; width: 15%;">{edit} {delete}</div>
+        </div>
+    <!-- #END sub.list -->
+
+    <!-- #BEGIN category.post -->
+
+
+
+		<script language='javascript'>
+			var text_name = 'post-content';
+		</script>
+            <div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+  	            <b>{lang.category}</b>
+  	        </div>
+
+			<form method='post' action='' onsubmit='return false;' name='post'>
+				<input id='id' type='hidden' size='10' value='{id}'>
+			<div style='float: left; width: 270px; margin-top: 3px;'>
+
+                <div style='width: 270px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 80px;'>{lang.select}:</div>
+                    {for}
+				</div>
+
+				<div style='width: 270px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 80px;'>{lang.title}:</div>
+                    <input id='title' size='25' value='{title}'>
+				</div>
+				<div style='width: 270px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 80px;'>{lang.category}:</div>
+                    <div id='cat-select'>{cat.select}</div>
+				</div>
+
+                <div style='width: 270px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 80px;'>{lang.vitri}:</div>
+                    <input id='order' type='text' size='5' value='{order}' />
+				</div>
+			</div>
+
+				<div align='center' style='float: left; width: 92%; padding-left: 8px; text-align: left;'>
+					{lang.content}:
+				</div>
+					<div align='center' style='padding-left: 30px; width: 460px; float: left; '>
+						{editor}
+						<textarea id="post-content" name="post-content" style="height: 155px; width: 350px; background-color: #ffffff;">{content}</textarea>
+					</div>
+					<div align='center'><br><input type='submit' value='{lang.submit}' onclick="return category_submit();"> <input type='button' value='{lang.cancel}' onclick="return viewpages('cmain','admin=category');"></div>
+			</form>
+	<!-- #END category.post -->
+
+
+    <!-- #BEGIN block.top -->
+        <div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left;'>
+  	            <b>{lang.block}</b>
+  	    </div>
+        <p align='right'>
+            <b>{lang.select}:</b> {for.select}
+		</p>
+        <div style='padding-left: 5px;'>
+            <table width="460">
+                <tr style='background-color: #c0c0c0;'>
+                    <td align='left' colspan="3" width="310">
+                        <b>&nbsp;&nbsp;{lang.title} </b>
+                    </td>
+                    <td align='center' colspan="3" width="50">
+                        <b>{lang.class}</b>
+                    </td>
+                    <td align='center' colspan="3" width="100">
+                        <b>{lang.select}</b>
+                    </td>
+
+                </tr>
+                {list}
+            </table>
+        </div>
+        <div style='float: right;'>
+            <span title='Preview' onclick="loadblock('{for}=home');" class='bluebutton'>Preview</span>
+            <span title='New' onclick="viewpages('cmain','admin=block_add&for={for}');" class='redbutton'>New</span>
+        </div>
+    <!-- #END block.top -->
+
+    <!-- #BEGIN block.list -->
+                <tr id='block-list-{id}' style='background-color: #eaeaea;'>
+                    <td align='left' colspan="3" width="200">
+                        <b>&nbsp;&nbsp;{name} </b>
+                    </td>
+                    <td align='center' colspan="3" width="100">
+                        {code}
+                    </td>
+                    <td align='center' colspan="3" width="100">
+                        {active} {edit} {del}
+                    </td>
+                </tr>
+    <!-- #END block.list -->
+
+
+    <!-- #BEGIN block.add -->
+        <div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+  	            <b>{lang.block}</b>
+  	    </div>
+
+        <form method="post" onsubmit="return false;">
+                <div style='width: 460px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 110px;'>{lang.select}:</div>
+                    {for}
+				</div><input id="id" value="{id}" type="hidden" size="10" />
+                <div style='width: 460px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 110px;'>{lang.title}:</div>
+                    <input id='name' size='25' value='{name}'>&nbsp;<font color="red"><b>*</b></font>
+				</div>
+				<div style='width: 460px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 110px;'>{lang.showname}:</div>
+                    <input id='showname' size='25' value='{showname}'>&nbsp;<font color="red"><b>*</b></font>
+				</div>
+                <div style='width: 460px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 110px;'>{lang.vitri}:</div>
+                    <input id='order' size='25' value='{order}'>
+				</div>
+                <div style='width: 460px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 110px;'>{lang.select}:</div>
+                    {mode}
+				</div>
+
+                <div style='width: 460px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 110px;'>{lang.select}:</div>
+                    <div id='block_function'>{function}</div>
+				</div>
+
+                <div style='width: 460px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 110px;'>{lang.active}:</div>
+                    {active}
+				</div>
+
+                <div align='center'><br>
+                    <input type='submit' value='{lang.submit}' onclick="return block_submit();">
+                    <input type='button' value='{lang.cancel}' onclick="return viewpages('cmain','admin=block&type={type}');">
+                </div>
+        </form>
+    <!-- #END block.add -->
+
+    <!-- #BEGIN addon.top -->
+        <div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+  	            <b>Add-ons</b>
+  	    </div>
+        <div style='padding-left: 5px;'>
+        <table width="460">
+            <tr style="background-color: #c0c0c0;">
+                <td colspan="4" align='center' width="195">
+                    <b>{lang.title} / {lang.function}  </b>
+                </td>
+                <td colspan="4" align='center' width="100">
+                    <b>{lang.author} </b>
+                </td>
+                <td colspan="4" align='center' width="70">
+                    <b>{lang.phanloai} </b>
+                </td>
+                <td colspan="4" align='center' width="90">
+                    <b>{lang.select}</b>
+                </td>
+            </tr>
+            {list}
+        </table>
+        </div>
+        <div style='float: right;'>
+            <span class='redbutton' onclick="viewpages('cmain','admin=addon_install');" title="Refresh">Refresh</span>
+        </div>
+    <!-- #END addon.top -->
+
+    <!-- #BEGIN addon.list -->
+            <tr id="addon-{id}" style='background-color: #eaeaea;'>
+                <td colspan="4" width="195">
+                    &nbsp;&nbsp;<b>{name} </b> <br />
+                        &nbsp;&nbsp;{content}
+                </td>
+                <td colspan="4" align='center' width="100">
+                    {author}
+                </td>
+                <td colspan="4" align='center' width="70">
+                    {cat}
+                </td>
+                <td colspan="4" align='center' width="90">
+                    {admin} {active} {del}
+                </td>
+            </tr>
+    <!-- #END addon.list -->
+
+
+
+<!-- END html -->

@@ -1,0 +1,56 @@
+<!-- BEGIN html -->
+<!-- #BEGIN comment.list -->
+	<div id='comment-{id}' style='width: 460px; margin-bottom: -5px;'>
+		<div style='float: left; width: 420px; padding: 5px; padding-left: 10px; background-color: {color}; border: 1px solid #c0c0c0;'>
+			<div style='float: left; width: 45px; height: 45px; border: 1px solid #c0c0c0; background-color: #EAEAEA; padding: 4px; text-align: center;'>
+				<img src='{gavatar}' width='45' border='0'>
+			</div>
+			<div style='float: left; padding-left: 10px; width: 350px;'>
+				<div style='float: right;'>{delete}</div>
+				<small>{date}</small><br>
+				{content}
+			</div>
+		</div>
+		<div style='float: left; width: 460px; padding-left: 15px;'>
+			{sub}&nbsp; 
+		</div>
+	</div>
+<!-- #END comment.list -->
+
+
+<!-- #BEGIN comment.list.lv2 -->
+	<div id='comment-id'>
+		<div style='float: left; width: 460px; padding-left: 15px;'>
+			<div style='float: left; width: 45px; height: 45px; border: 1px solid #c0c0c0; background-color: #EAEAEA; padding: 4px; text-align: center;'>
+				<img src='{gavatar}' width='45' border='0'>
+			</div>
+			<div style='float: left; padding-left: 10px;'>
+				{content}
+			</div>
+		</div>
+		<div style='float: left; width: 400px; padding-left: 15px;'>
+			{sub}
+		</div>
+	</div>
+<!-- #END comment.list.lv2 -->
+
+
+	<!-- #BEGIN comment.form -->
+		<div style='float: left; width: 460px;'>
+			<script language='javascript'>
+					var text_name = 'post-comment'; 
+			</script>
+			<form method='post' name='post' onsubmit="return comment_submit();">
+				<div align='center' style='width: 92%;'>
+					<input id='post-type' value='{type}' type='hidden' size='10'>
+					<input id='post-catid' value='{catid}' type='hidden' size='10'>
+					<input id='post-level' value='{level}' type='hidden' size='10'><br>
+						{editor}
+						<textarea id="post-comment" name="post-comment" style="height: 120px; width: 350px; background-color: #ffffff;"></textarea><br><br>
+						<input type='submit' value='{lang.submit}'> <input type='reset' value='{lang.reset}'>
+						
+				</div>
+			</form>
+		</div>
+	<!-- #END comment.form -->
+<!-- END html -->

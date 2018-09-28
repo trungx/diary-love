@@ -1,0 +1,63 @@
+<!-- BEGIN html -->
+	<!-- #BEGIN wish.top.list -->
+		<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+				<hl><a href='javascript:;' onclick="viewpages('main','wish=home');web_title('Wish - Home');" title='Wish - Home'>Wish</a></hl>
+		</div>
+		<div class='right-main'>
+			<p align='center'><img src="{skin.link}/images/wish.jpg"></p>
+			<div style="background: url({skin.link}/images/paper.gif) repeat; height: 450px; width: 100%;">{wish.list}<br></div>
+		</div>
+		{pages}
+		
+		<p align='right'><span class='redbutton' onclick="viewpages('main','wish=new');web_title('{lang.new_wish}');" title='{lang.new_wish}'>New</span></p>
+		
+	<!-- #END wish.top.list -->
+	
+	
+	<!-- #BEGIN wish.list -->
+		<div class="folder" title="{lang.post_by}: {username}" onclick="show_wish({id})" style='margin: 0 5px 5px 10px; float: left; width: 50px; cursor: pointer;' id='wish-{id}'>
+			<img src="images/wish/{for}.jpg"><br><font color="{color}">{username}</font>
+		</div>
+	<!-- #END wish.list -->
+
+	<!-- #BEGIN wish.view -->
+		<style type="text/css">
+			.close{
+				cursor:pointer;
+				padding: 3px;
+				background-color: #ff9797;
+				float: left;
+				text-align: center;
+			}
+			.close:hover{
+				padding: 3px;
+				background-color: red;
+				font-color: #ffffff;
+				float: left;
+				text-align: center;
+			}
+		</style>
+		<table border="0" cellpadding="0" cellspacing="0" style="padding: 10px;"><tr><td>
+		<div style='float:left;'>
+			<font color="#FF0000"><span style="font-family: arial, verdana, helvetica; font-size: 14px; font-weight: bold;">{lang.wish}:</span></font></div>
+		<div style='float: right; height: 15px; width: 35px;' class='close' title='close' onclick="hideform('loading');"><b>[X]</b></div>
+		<table width="320" border="0" cellpadding="0" cellspacing="0" style="background-color: #F7F7F7; border: 2px solid #FFFFFF; padding: 5px;">
+		 <tr>
+		 	<td align='left' style="padding: 1px; background-color: #ff9797;">
+		 		<img src='images/wish/{for}.jpg' align="left" style="margin-right: 5px;"><font color="#000000">{lang.post_by}: {user} <br>{mini.date}</font>
+		 	</td>
+		 </tr>		 <tr>
+		  	<td align='left' style="background: url({skin.link}/images/paper.gif) repeat;">
+				<font color='#000000'>{content}<br><br></font>
+		  	</td>
+		 </tr>
+		</table>
+		</tr></td></table>
+	
+	
+	<!-- #END wish.view -->
+
+
+
+
+<!-- END html -->

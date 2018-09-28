@@ -1,0 +1,26 @@
+			<script language='javascript'>
+				$(document).ready(function(){
+					$('#password').focus();
+					return false;
+					});
+			</script>
+			<div class="login">
+				<div class="logo">
+					<object classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" id="obj1" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" border="0" width="400" height="160">
+						<param name="movie" value="{skin.link}/images/fly.swf">
+						<param name="quality" value="High">
+						<param name="wmode" value="transparent">
+						<embed title='DIARYLOVE 2.0' src="{skin.link}/images/fly.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="obj1" width="400" height="160" quality="High" wmode="transparent"></object>
+					</div><!-- end logo -->
+				<div class="login-form">
+					<form method='post' onsubmit='return login()'>
+					<i><b>
+							{name}
+						</b></i><br>
+						<div>
+							<input type='password' id='password' name='password' class='login-input'><br>
+							<input type="submit" class='login-submit' title='&#272;&#259;ng nh&#7853;p' value=''>		
+						</div><br>
+					</form>
+				</div><!-- end login-form -->
+			</div><!-- end login -->

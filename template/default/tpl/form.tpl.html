@@ -1,0 +1,208 @@
+<!-- BEGIN html -->
+	<!-- #BEGIN diary.post -->
+		<script language='javascript'>
+			var text_name = 'post-content';
+		</script>
+		<p align='center'><img src='{skin.link}/images/diary.jpg'></p>
+			<form method='post' action='' onsubmit='return false;' name='post'>
+				<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+					<hl><a href='javascript:;' onclick="viewpages('main','diary=home');web_title('Diary - Home');" title='Diary - Home'>Diary</a></hl> - <b>{lang}</b>
+				</div>
+				<div style='float: left; width: 460px;'>
+					<div class='gallery-tool' style='float: right; border-top: 1px;' title='{lang.new_diary}' onclick="{add.diary}"><img src='{skin.link}/images/diary.png' width='16' border='0'></div>
+					<div class='gallery-tool' style='float: right; border-top: 1px;' title='{lang.add_category}' onclick="{add.category}"><img src='{skin.link}/images/gift.gif' width='16' height='16' border='0'></div>
+					<div style='float: right; text-align: right; padding: 5px 5px 0 0;'><b>{lang.select}: </b></div>
+				</div>
+				
+				<input id='post-weather' type='hidden' size='10' value='{weather}'>
+				<input id='post-id' type='hidden' size='10' value='{id}'>
+				<input id='post-type' type='hidden' size='10' value='{type}'>
+				
+				<div style='float: left; width: 300px; margin-top: 3px;'>
+				<div style='width: 300px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 70px;'>{lang.title}:</div>
+                    <input id='post-title' size='25' value='{title}'>
+				</div>
+				<div style='width: 300px; display: {cat.show}; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 70px;'>{lang.category}:</div> {cat.select}
+				</div>
+				<div style='width: 300px; display: {tool.show}; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 70px;'>
+						{lang.today}:</div> {weather.list}
+				</div>
+				<div style='width: 300px; display: {tool.show}; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 70px;'>
+						{lang.feeling}:</div> <div style='float: left; width: 160px;'>{feeling.list}</div>
+				</div>
+			</div>	
+			<div style='display: {tool.show}; float: left; width: 150px; text-align: center;'>
+				<div id='weather-thumb' class='sky-bg' style='margin-top: 5px; height: 92px; text-align: center;'><center>{weather.img}</center></div>
+			</div>
+
+				
+					<div style='width: 92%; float: left; text-align: left; padding-left: 5px;'>
+						{lang.content}:
+					</div>
+					<div align='center' style='float: left; width: 92%;'>
+						{editor}
+						<textarea id="post-content" name="post-content" style="height: 255px; width: 380px; background-color: #ffffff;">{content}</textarea>
+					</div>
+					<div align='center'><br><input type='submit' value='{lang.submit}' onclick="return diary_submit();"> <input type='button' value='{lang.cancel}' onclick="return viewpages('main','diary=list');"></div>
+			</form>
+			<br>
+			
+	<!-- #END diary.post -->
+	
+	
+
+	
+	<!-- #BEGIN gallery.post -->
+		<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+				<hl><a href='javascript:;' onclick="viewpages('main','gallery=home');web_title('Gallery - Home');" title='Gallery - Home'>Gallery</a></hl> - <b>{lang}</b>
+		</div>
+		<div style='float: left; width: 460px;'>
+			<div class='gallery-tool' style='float: right; border-top: 1px;' title='{lang.add_pic}' onclick="{add.pic}"><img src='{skin.link}/images/photo.png' border='0'></div>
+			<div class='gallery-tool' style='float: right; border-top: 1px;' title='{lang.add_album}' onclick="{add.album}"><img src='{skin.link}/images/album.gif' width='16' border='0'></div>
+			<div class='gallery-tool' style='float: right; border-top: 1px;' title='{lang.add_category}' onclick="{add.category}"><img src='{skin.link}/images/gift.gif' width='16' height='16' border='0'></div>
+		
+			<div style='float: right; text-align: right; padding: 5px 5px 0 0;'><b>{lang.select}: </b></div>
+		</div> 
+		
+		<script language='javascript'>
+			var text_name = 'post-content'; 
+		</script>
+		<p align='center'><img src='{skin.link}/images/gallery.jpg'></p>
+			<form method='post' action='' onsubmit='return false;' name='post'>
+				<input id='post-type' type='hidden' size='10' value='{type}'>
+				<input id='post-id' type='hidden' size='10' value='{id}'>
+			<div style='float: left; width: 300px; margin-top: 3px;'>
+				<div style='width: 300px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 80px;'>{lang.title}:</div>
+                    <input id='post-title' size='25' value='{title}'>
+				</div>
+				<div style='width: 300px; display: {cat.show}; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 80px;'>{lang.category}:</div> {cat.select}
+				</div>
+				<div style='width: 300px; display: {album.show}; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 80px;'>
+						{lang.album}:</div> {album.select}
+				</div>
+				<div style='width: 300px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 80px;'>
+						{lang.link_thumb}:</div>
+                        <input onclick="select_thumb('thumb')" size='25' type='text' id='post-thumb' value='{thumb}'>
+				</div>
+				<div style='width: 300px; display: {pic.show}; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 80px;'>
+						{lang.link_pic}:</div>
+                        <input onclick="select_thumb('link')" size='25' type='text' id='post-link' value='{link}'>
+				</div>
+			</div>	
+				<div style='float: left; width: 150px; text-align: center;'>
+					<div id='pic-preview' style='margin-top: 5px;'><img class='image' width="100" height="80" src='{skin.link}/images/nopic.gif'></div>
+				</div>
+
+				<div align='center' style='float: left; width: 92%; padding-left: 8px; text-align: left;'>
+					{lang.content}:
+				</div>
+					<div align='center' style='width: 92%;float: left; '>
+						{editor}
+						<textarea id="post-content" name="post-content" style="height: 155px; width: 350px; background-color: #ffffff;">{content}</textarea>
+					</div>
+					<div align='center'><br><input type='submit' value='{lang.submit}' onclick="return gallery_submit();"> <input type='button' value='{lang.cancel}' onclick="return viewpages('main','gallery=home');"></div>
+			</form>
+	<!-- #END gallery.post -->
+	
+	
+	<!-- #BEGIN music.post -->
+		<script language='javascript'>
+			var text_name = 'post-content'; 
+		</script>
+		<p align='center'><img src='{skin.link}/images/music.jpg'></p>
+			<form method='post' action='' onsubmit='return false;' name='post'>
+				<div align='center' style='width: 460px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+					<hl><a href='javascript:;' onclick="viewpages('main','music=home');web_title('Music - Home');" title='Music - Home'>Music</a></hl> - <b>{lang}</b>
+				</div>
+				<div style='float: left; width: 460px;'>
+					<div class='gallery-tool' style='float: right; border-top: 1px;' title='{lang.add_music}' onclick="{add.music}"><img src='images/icon/play.gif' width='16' border='0'></div>
+					<div class='gallery-tool' style='float: right; border-top: 1px;' title='{lang.add_singer}' onclick="{add.singer}"><img src='{skin.link}/images/playlist.png' width='16' border='0'></div>
+					<div class='gallery-tool' style='float: right; border-top: 1px;' title='{lang.add_album}' onclick="{add.album}"><img src='{skin.link}/images/diary.png' width='16' border='0'></div>
+					<div class='gallery-tool' style='float: right; border-top: 1px;' title='{lang.add_category}' onclick="{add.category}"><img src='{skin.link}/images/gift.gif' width='16' height='16' border='0'></div>
+					<div style='float: right; text-align: right; padding: 5px 5px 0 0;'><b>{lang.select}: </b></div>
+				</div>
+				<input id='post-id' type='hidden' size='10' value='{id}'>
+				<input id='post-type' type='hidden' size='10' value='{type}'>
+				
+				<div style='float: left; width: 300px; margin-top: 3px;'>
+				<div style='width: 300px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 70px;'>{lang.title}:</div> <input id='post-title' size='25' value='{title}'>
+				</div>
+				<div style='width: 300px; display: {cat.show}; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 70px;'>{lang.category}:</div> {cat.select}
+				</div>
+				<div style='width: 300px; display: {album.show}; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 70px;'>{lang.album}:</div> {album.select}
+				</div>
+				<div style='width: 300px; display: {link.show}; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 70px;'>{lang.singer}:</div> {singer.select}
+				</div>
+				<div style='display: {thumb.show}; width: 300px; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 70px;'>
+						{lang.link_thumb}:</div><input onclick="select_thumb('thumb')" size='25' type='text' id='post-thumb' value='{thumb}'>
+				</div>
+				<div style='width: 300px; display: {link.show}; padding: 3px;'>
+					<div style='float: left; padding-left: 5px; width: 70px;'>{lang.link}:</div> <input type='text' size='25' value='{link}' id='post-link'>
+				</div>
+			</div>	
+			<div style='display: {thumb.show}; float: left; width: 150px; text-align: center;'>
+					<div id='pic-preview' style='margin-top: 5px;'><img class='image' width="100" height="80" src='{pic}'></div>
+			</div>
+
+				
+					<div style='width: 92%; float: left; text-align: left; padding-left: 5px;'>
+						{lang.content}:
+					</div>
+					<div align='center' style='width: 92%;float: left; '>
+						{editor}
+						<textarea id="post-content" name="post-content" style="height: 155px; width: 350px; background-color: #ffffff;">{content}</textarea>
+					</div>
+					<div align='center'><br><input type='submit' value='{lang.submit}' onclick="return music_submit();"> <input type='button' value='{lang.cancel}' onclick="return viewpages('main','music=list');"></div>
+			</form>
+			<br>
+			
+	<!-- #END music.post -->
+	
+	
+	
+	<!-- #BEGIN wish.post -->
+		<div align='center' style='width: 409px; height: 22px; background-color: #EAEAEA; border: 1px solid #c0c0c0; text-align: left; padding-left: 5px;'>
+				<hl><a href='javascript:;' onclick="viewpages('main','wish=home');web_title('Wish - Home');" title='Wish - Home'>Wish</a></hl>
+		</div>
+		
+		<script language='javascript'>
+			var text_name = 'post-content'; 
+		</script>
+		<img src='{skin.link}/images/wish.jpg'>
+			<form method='post' action='' onsubmit='return false;' name='post'>
+				<div style='float: left; width: 270px; margin-top: 3px;'>
+					<div style='width: 270px; padding: 3px;'>
+						<div style='float: left; padding-left: 5px; width: 80px;'>{lang.category}:</div> {cat.select}
+					</div>
+				</div>	
+
+				<div align='center' style='float: left; width: 92%; padding-left: 8px; text-align: left;'>
+					{lang.content}:
+				</div>
+					<div align='center' style='width: 92%;float: left; '>
+						{editor}
+						<textarea id="post-content" name="post-content" style="height: 155px; width: 350px; background-color: #ffffff;"></textarea>
+					</div>
+					<div align='center'><br><input type='submit' value='{lang.submit}' onclick="return wish_submit();"> <input type='button' value='{lang.cancel}' onclick="return viewpages('main','wish=home');"></div>
+			</form>
+	<!-- #END gallery.post -->
+
+
+	
+<!-- END html -->
+
+
